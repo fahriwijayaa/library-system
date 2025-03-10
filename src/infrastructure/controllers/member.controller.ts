@@ -8,8 +8,8 @@ import {
   Put,
 } from '@nestjs/common';
 import { ApiBody } from '@nestjs/swagger';
-import { MemberDto } from 'src/application/dto/member.dto';
-import { MemberService } from 'src/application/services/member.service';
+import { MemberDto } from '../../application/dto/member.dto';
+import { MemberService } from '../../application/services/member.service';
 
 @Controller('members')
 export class MemberController {

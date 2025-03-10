@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ApiBody } from '@nestjs/swagger';
-import { BorrowBookDto, ReturnBookDto } from 'src/application/dto/borrow.dto';
-import { BorrowService } from 'src/application/services/borrow.service';
+import { BorrowBookDto, ReturnBookDto } from '../../application/dto/borrow.dto';
+import { BorrowService } from '../../application/services/borrow.service';
 
 @Controller('borrows')
 export class BorrowController {

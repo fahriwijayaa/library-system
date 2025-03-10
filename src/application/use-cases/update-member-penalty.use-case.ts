@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Member } from 'src/domain/entities/member.entity';
+import { Member } from '../../domain/entities/member.entity';
 
 @Injectable()
 export class UpdateMemberPenaltyUseCase {

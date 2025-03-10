@@ -8,8 +8,8 @@ import {
   Put,
 } from '@nestjs/common';
 import { ApiBody } from '@nestjs/swagger';
-import { BookDto } from 'src/application/dto/book.dto';
-import { BookService } from 'src/application/services/book.service';
+import { BookDto } from '../../application/dto/book.dto';
+import { BookService } from '../../application/services/book.service';
 
 @Controller('books')
 export class BookController {
@@ -31,7 +31,7 @@ export class BookController {
       },
     },
   })
-  createMember(@Body() bookDto: BookDto) {
+  createBook(@Body() bookDto: BookDto) {
     return this.bookService.createBook(bookDto);
   }
 
@@ -45,12 +45,12 @@ export class BookController {
       },
     },
   })
-  editMember(@Param('code') code: string, @Body() bookDto: BookDto) {
+  editBook(@Param('code') code: string, @Body() bookDto: BookDto) {
     return this.bookService.editBook(code, bookDto);
   }
 
   @Delete('deleteBook/:code')
-  deleteMember(@Param('code') code: string) {
+  deleteBook(@Param('code') code: string) {
     return this.bookService.deleteBook(code);
   }
 }

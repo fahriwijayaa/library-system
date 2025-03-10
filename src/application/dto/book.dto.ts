@@ -1,5 +1,5 @@
 export class BookDto {
-  bookCode: string;
+  bookCode?: string;
   bookTitle: string;
   bookAuthor: string;
 }
